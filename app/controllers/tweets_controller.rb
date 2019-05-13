@@ -38,7 +38,6 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id' do
-    binding.pry
     if params[:content].empty?
       redirect "/tweets/#{params[:id]}/edit"
     end
