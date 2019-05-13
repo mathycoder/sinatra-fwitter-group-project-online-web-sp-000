@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   get '/login' do
-    if logged_in? 
+    if logged_in?
     erb :'users/login'
   end
 
@@ -32,8 +32,8 @@ class UsersController < ApplicationController
   end
 
   helpers do
-    def logged_in
-      session[:user_id].nil?
+    def logged_in?
+      !session[:user_id].nil?
     end
 
 end
