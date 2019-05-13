@@ -32,6 +32,7 @@ class UsersController < ApplicationController
 
   helpers do
     def logged_in
-    end 
+      session[:user_id].nil?
+    end
 
 end
