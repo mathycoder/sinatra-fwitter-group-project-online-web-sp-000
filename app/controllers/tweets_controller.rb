@@ -5,8 +5,8 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets' do
-    #@user = User.find(session[:user_id])
-    @tweets = Tweet.all 
+    @user = User.find(session[:user_id])
+    @tweets = Tweet.all
     erb :'tweets/index'
   end
 
