@@ -19,7 +19,8 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     tweet = Tweet.create(params)
-    binding.pry 
+    tweet.user = current_user
+    tweet.save 
     redirect "/tweets/#{tweet.id}"
   end
 
