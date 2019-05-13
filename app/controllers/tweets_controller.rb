@@ -38,9 +38,9 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id' do
-    binding.pry 
+    binding.pry
     if params[:content].empty?
-      redirect "/tweets/#{tweet.id}/edit"
+      redirect "/tweets/#{params[:id]}/edit"
     end
     tweet = Tweet.find(params[:id])
     tweet.update(content: params[:content])
