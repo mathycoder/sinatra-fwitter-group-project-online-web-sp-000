@@ -29,4 +29,9 @@ class UsersController < ApplicationController
       redirect '/login'
     end
   end
+
+  helpers do
+    def logged_in
+    end 
+
 end
