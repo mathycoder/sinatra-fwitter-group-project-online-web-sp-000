@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   get '/users/:slug' do
-    @user = current_user 
+    @user = current_user
     erb :'users/show'
   end
 
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
   end
 
   get '/logout' do
+    binding.pry 
     if logged_in?
       session.clear
     end
