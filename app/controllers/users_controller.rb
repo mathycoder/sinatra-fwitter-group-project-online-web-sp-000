@@ -24,7 +24,11 @@ class UsersController < ApplicationController
     binding.pry
     user = User.find_by(username: params[:username]).authenticate(params[:password])
     if user
-      session[:user_id] = user.id 
+      session[:user_id] = user.id
+      redirect '/tweets'
+    else
+      redirect '/login'
+    end 
 
   end
 end
