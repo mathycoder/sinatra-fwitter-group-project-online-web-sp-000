@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
       erb :'tweets/new'
     else
       redirect '/login'
-    end 
+    end
   end
 
   get '/tweets' do
@@ -19,6 +19,7 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     tweet = Tweet.create(params)
+    binding.pry 
     redirect "/tweets/#{tweet.id}"
   end
 
