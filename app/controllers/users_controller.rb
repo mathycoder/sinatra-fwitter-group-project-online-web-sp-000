@@ -45,5 +45,8 @@ class UsersController < ApplicationController
     def logged_in?
       !session[:user_id].nil?
     end
+
+    def current_user
+    end 
   end
 end
