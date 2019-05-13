@@ -33,6 +33,9 @@ class UsersController < ApplicationController
     end
   end
 
+  post '/logout' do 
+  end 
+
   helpers do
     def logged_in?
       !session[:user_id].nil?
