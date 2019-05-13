@@ -39,7 +39,6 @@ class UsersController < ApplicationController
   end
 
   get '/logout' do
-    binding.pry 
     if logged_in?
       session.clear
     end
