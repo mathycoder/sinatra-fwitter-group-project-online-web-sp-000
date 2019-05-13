@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
 
   def slug
     
-  end 
+  end
 end
