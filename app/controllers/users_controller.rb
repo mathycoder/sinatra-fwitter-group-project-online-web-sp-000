@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  get '/users/:slug' do
+  end 
+
   get '/signup' do
     if logged_in?
       redirect '/tweets'
