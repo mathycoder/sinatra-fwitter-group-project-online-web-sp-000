@@ -34,7 +34,8 @@ class UsersController < ApplicationController
   end
 
   post '/logout' do
-  end 
+    session.clear 
+  end
 
   helpers do
     def logged_in?
