@@ -53,8 +53,9 @@ class TweetsController < ApplicationController
   end
 
   delete '/tweets/:id' do
+    if current_user.id != tweet.id
     tweet = Tweet.find(params[:id])
-    binding.pry 
+    binding.pry
     tweet.destroy
   end
 
