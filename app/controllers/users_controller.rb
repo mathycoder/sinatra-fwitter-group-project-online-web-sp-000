@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   get '/signup' do
+    binding.pry 
     if logged_in?
       redirect '/tweets'
     end
