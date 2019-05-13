@@ -22,8 +22,9 @@ class UsersController < ApplicationController
 
   post '/login' do
     binding.pry
-    user = User.find_by(username: params[:username])
-    if user && user.authenticate("blah")
+    user = User.find_by(username: params[:username]).authenticate(params[:password])
+    if user
+      session[:user_id] = user.id 
 
   end
 end
